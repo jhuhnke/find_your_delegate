@@ -1,0 +1,8 @@
+{% extends "values_quiz/base.html" %}
+{% block content %}
+    <h1>Results</h1>
+    {% for delegate in delegates %}
+    <h2>{{ delegate.delegate }}</h2>
+    <p> This delegate is on {{ delegate.blockchain }}</p>
+    {% endfor %}
+{% endblock content %}
