@@ -25,7 +25,7 @@ def home(request):
         form = findDelegate(request.POST)
         if form.is_valid(): 
             form.save()
-            return HttpResponseRedirect('/results')
+            return HttpResponseRedirect('results/')
     
     form = findDelegate
     return render(request, 'values_quiz/home.html', {'form':form})
