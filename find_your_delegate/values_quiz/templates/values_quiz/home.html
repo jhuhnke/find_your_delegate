@@ -1,4 +1,16 @@
 {% extends "values_quiz/base.html" %}
 {% block content %}
-    <h1>Values Quiz</h1>
+    <center>
+        <h1>Values Quiz</h1>
+        <br/>
+        <br/>
+
+        <form action="" method=POST>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+    </center>
 {% endblock content %}
